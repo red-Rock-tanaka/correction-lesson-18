@@ -54,7 +54,7 @@ protected function validator(array $data)
         'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
         'password' => ['required', 'string', 'min:8', 'confirmed'],
     ], [
-        'name.not_regex' => '文字を入力してください。', // 半角・全角スペースのみの場合のエラーメッセージ
+        'name.not_regex' => '文字を入力してください。', // 半角・全角スペースのみの場合に表示されるエラーメッセージ
     ]);
 }
 
