@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\Auth\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,8 @@ Route::post('post/create', [PostsController::class, 'create'])->name('post.creat
 Route::get('post/{id}/update-form', [PostsController::class, 'updateForm']);
 Route::post('post/update', [PostsController::class, 'update'])->name('post.update');
 Route::get('post/{id}/delete', [PostsController::class, 'delete'])->name('post.delete');
+
+Route::post('register', [RegisterController::class, 'register'])->name('register'); // 新規登録のルートを追加
 
 Auth::routes();
 
